@@ -1519,6 +1519,166 @@
 
   .notification.show { transform: translateY(0); opacity: 1; }
   .notification strong { color: var(--accent); display: block; margin-bottom: 4px; letter-spacing: 0.1em; }
+
+  /* ============================================
+     RESPONSIVE MOBILE — max-width: 768px
+  ============================================ */
+  @media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+      padding: 0 20px;
+      height: 56px;
+    }
+    .nav-links { display: none; }
+    .nav-cta { padding: 7px 14px; font-size: 10px; }
+
+    /* HERO */
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 80px 20px 48px;
+      min-height: auto;
+      gap: 48px;
+    }
+    .hero h1 { font-size: clamp(52px, 14vw, 80px); }
+    .hero-glow { width: 400px; height: 400px; right: -150px; }
+    .hero-glow2 { display: none; }
+    .hero-actions { flex-wrap: wrap; gap: 20px; }
+    .price-amount { font-size: 44px; }
+
+    .hero-visual { justify-content: center; }
+    .hero-img-wrap {
+      width: 100%;
+      max-width: 380px;
+      animation: none;
+    }
+    /* Hide floating spec labels on mobile — too cramped */
+    .spec-float { display: none; }
+
+    /* SPECS SECTION */
+    .specs-section { padding: 64px 20px; }
+    .specs-grid {
+      grid-template-columns: 1fr;
+    }
+    .spec-card { padding: 28px 24px; }
+
+    /* ANATOMY */
+    .anatomy-inner {
+      grid-template-columns: 1fr;
+    }
+    .anatomy-text {
+      padding: 48px 24px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .anatomy-img-wrap { min-height: 260px; }
+    .anatomy-img { object-position: center top; }
+
+    /* FEATURES */
+    .features-section { padding: 64px 20px; }
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    .feature-card.large {
+      grid-column: span 1;
+      grid-template-columns: 1fr;
+    }
+    .feature-card { padding: 28px 24px; }
+    .feature-img-card { min-height: 300px; }
+    .feature-visual-img { min-height: 220px; }
+    .multipoint-img { object-position: center top; }
+
+    /* PACKAGING */
+    .packaging-section { padding: 64px 20px; }
+    .packaging-grid { grid-template-columns: 1fr; }
+    .pkg-item { padding: 36px 24px; }
+
+    /* GALLERY */
+    .gallery-section { padding: 64px 20px; }
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    .gallery-item-main { min-height: 280px; }
+    .gallery-item:not(.gallery-item-main) { min-height: 220px; }
+    .gallery-title { font-size: clamp(36px, 10vw, 56px); }
+
+    /* ORDER */
+    .order-section { padding: 64px 20px; }
+    .order-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .order-info h2 { font-size: clamp(40px, 11vw, 64px); }
+    .order-form { padding: 28px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+
+    /* SECTION HEADERS */
+    .section-header { flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .section-line { display: none; }
+    .section-title { font-size: clamp(32px, 9vw, 48px); }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      gap: 28px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+    /* NOTIFICATION */
+    .notification {
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+    }
+
+    /* Disable heavy parallax/float on mobile for perf */
+    .hero-img-corner { display: none; }
+  }
+
+  /* ============================================
+     RESPONSIVE TABLET — max-width: 1024px
+  ============================================ */
+  @media (max-width: 1024px) and (min-width: 769px) {
+
+    nav { padding: 0 28px; }
+    .nav-links { gap: 24px; }
+
+    .hero {
+      padding: 80px 28px 48px;
+      gap: 32px;
+    }
+    .hero-img-wrap { width: 100%; max-width: 440px; }
+    .spec-float { display: none; }
+
+    .specs-section { padding: 80px 28px; }
+    .specs-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .anatomy-inner { grid-template-columns: 1fr; }
+    .anatomy-text {
+      padding: 56px 40px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .anatomy-img-wrap { min-height: 320px; }
+
+    .features-section { padding: 80px 28px; }
+    .feature-card.large {
+      grid-template-columns: 1fr;
+    }
+    .feature-visual-img { min-height: 240px; }
+
+    .packaging-section { padding: 80px 28px; }
+    .gallery-section { padding: 80px 28px; }
+
+    .order-section { padding: 80px 28px; }
+    .order-grid { gap: 40px; }
+    .order-form { padding: 36px 28px; }
+
+    footer { padding: 40px 28px; }
+  }
+
 </style>
 </head>
 <body>
